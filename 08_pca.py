@@ -14,5 +14,5 @@ pca = PCA(n_components=3)
 fit = pca.fit(X)
 
 # summarize components
-print("Explained variance: %s" % (fit.explained_variance_ratio_))
+print('Explained variance: %s' % (fit.explained_variance_ratio_))
 print(fit.components_)
