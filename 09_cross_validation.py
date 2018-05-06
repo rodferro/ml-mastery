@@ -6,8 +6,8 @@ from sklearn.linear_model import LogisticRegression
 
 filename = 'pima-indians-diabetes.data.csv'
 names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
-dataframe = read_csv(filename, names=names)
-array = dataframe.values
+data = read_csv(filename, names=names)
+array = data.values
 X = array[:, 0:8]
 y = array[:, 8]
 num_folds = 10
