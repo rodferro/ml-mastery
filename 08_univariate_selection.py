@@ -8,7 +8,7 @@ filename = 'pima-indians-diabetes.data.csv'
 names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
 data = read_csv(filename, names=names)
 array = data.values
-X = array[:, 0:8]
+X = array[:, :8]
 y = array[:, 8]
 
 # feature extraction
@@ -21,4 +21,4 @@ print(fit.scores_)
 
 # summarize selected features
 features = fit.transform(X)
-print(features[0:5, :])
+print(features[:5, :])
