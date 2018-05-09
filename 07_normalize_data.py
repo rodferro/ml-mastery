@@ -9,11 +9,11 @@ data = read_csv(filename, names=names)
 array = data.values
 
 # separate array into input and output components
-X = array[:, 0:8]
+X = array[:, :8]
 y = array[:, 8]
 scaler = Normalizer().fit(X)
 normalizedX = scaler.transform(X)
 
 # summarize transformed data
 set_printoptions(precision=3)
-print(normalizedX[0:5, :])
+print(normalizedX[:5, :])

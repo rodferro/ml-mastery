@@ -9,11 +9,11 @@ data = read_csv(filename, names=names)
 array = data.values
 
 # separate array into input and output components
-X = array[:, 0:8]
+X = array[:, :8]
 y = array[:, 8]
 scaler = StandardScaler().fit(X)
 rescaledX = scaler.transform(X)
 
 # summarize transformed data
 set_printoptions(precision=3)
-print(rescaledX[0:5, :])
+print(rescaledX[:5, :])
