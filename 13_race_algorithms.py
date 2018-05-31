@@ -38,9 +38,9 @@ for name, model in models:
     names.append(name)
     print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))
 
-# boxplot algorith comparison
+# boxplot algorithm comparison
 fig = pyplot.figure()
-fig.suptitle('Algorith comparison')
+fig.suptitle('Algorithm comparison')
 ax = fig.add_subplot(111)
 pyplot.boxplot(results)
 ax.set_xticklabels(names)
